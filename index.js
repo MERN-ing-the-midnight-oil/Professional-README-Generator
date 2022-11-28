@@ -3,6 +3,7 @@ const fs = require("fs");// is a very large library, iirc
 
 
 const generateBadge= ({license})=> {//How can I get the badge to appear in generateMarkdown?
+    let badge = ""
 
     if (license === `MIT`) {
         badge = `![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)`
@@ -27,27 +28,34 @@ const generateBadge= ({license})=> {//How can I get the badge to appear in gener
 }
 
 // I was really hoping thtat puting  ${generateBadge(title)} after the project name  here in the generateMarkdown would inject the badge URL that generateBadge should make. 
-const generateMarkdown= ({ projectname, description, installation, license, githubUsername, usage, screenshot, explain, contributions, email, title }) =>//we are telling generateMarkdown what parts of the return object we need
+const generateMarkdown= ({ projectname, description, installation, license, githubUsername, usage, screenshot, explain, contributions, email, }) =>//we are telling generateMarkdown what parts of the return object we need
 
  `# ${projectname}
 
- ${generateBadge(title)}
+ ${generateBadge(license)}
 
 ## Table of Contents
 
 [Description](#description)
 
+
 [Installation](#installation)
+
 
 [Usage](#usage)
 
+
 [License](##license)
+
 
 [Contributing](#contributing)
 
+
 [Tests](#tests)
 
+
 [Questions](#questions)
+
 
 ## Description
 ### ${description} 
@@ -75,7 +83,7 @@ const generateMarkdown= ({ projectname, description, installation, license, gith
 inquirer.prompt([
 {
 type: 'input',
-message: 'Enter your project title. This title should describe the whole project in one sentence, and explain the main purpose of the project',
+message: 'Enter your project title. This title should describe your whole project in one sentence, and explain the main purpose of the project',
 name: 'projectname',
 },
 {
@@ -89,19 +97,19 @@ message: 'Enter your installation instructions. If your project needs to run loc
 name: 'installation',
 },
 {
-    type: 'input',
-    message: 'Give instructions and examples for use. ',
-    name: 'usage',
+type: 'input',
+message: 'Give instructions and examples for use. ',
+name: 'usage',
 },
 {
-    type: 'input',
-    message: 'You may include a screenshot to help explain usage. Where is your sreenshot? For example: ** assets/images/screenshot.png ** (hit enter to skip)' ,
-    name: 'screenshot',
+type: 'input',
+message: 'You may include a screenshot to help explain usage. Where is your sreenshot? For example: ** assets/images/screenshot.png ** (hit enter to skip)' ,
+name: 'screenshot',
 },
 {
-    type: 'input',
-    message: 'What does your screenshot demostrate?',
-    name: 'explain',
+type: 'input',
+message: 'What does your screenshot demostrate? (hit enter to skip)' ,
+name: 'explain',
 },
 
 {
@@ -112,9 +120,9 @@ name: 'license',
 },
 
 {
-    type: 'input',
-    message: "At what email should users contact you with questions?",
-    name: 'email',
+type: 'input',
+message: "At what email should users contact you with questions?",
+name: 'email',
 },
 
 
@@ -123,10 +131,9 @@ type: 'input',
 message: "What is your GitHub username?  A link to that GitHub profile will be added to the README.",
 name: 'githubUsername',
 }
-
-
 ])
 .then((response) =>{
+    generateBadge(response)
     const readMeContent = generateMarkdown(response)// How can I also send (response) to generateBadge?
     fs.writeFile('YOURREADME.md', readMeContent, (err) =>
   err ? console.error(err) : console.log('Success! Your file is called "YOURREADME"')
