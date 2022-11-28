@@ -3,7 +3,7 @@ const fs = require("fs");// is a very large library, iirc
 
 
 const generateBadge= ({license})=> {//How can I get the badge to appear in generateMarkdown?
-    let badge = ""
+
     if (license === `MIT`) {
         badge = `![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)`
     }
@@ -26,8 +26,8 @@ const generateBadge= ({license})=> {//How can I get the badge to appear in gener
     
 }
 
-// I was really hoping thtat puting  ${generateBadge(title)} after the project name  would inject the badge URL that generateBadge should make. 
-const generateMarkdown= ({ projectname, description, installation, license, githubUsername, usage, screenshot, explain, contributions, email }) =>//we are telling generateMarkdown what parts of the return object we need
+// I was really hoping thtat puting  ${generateBadge(title)} after the project name  here in the generateMarkdown would inject the badge URL that generateBadge should make. 
+const generateMarkdown= ({ projectname, description, installation, license, githubUsername, usage, screenshot, explain, contributions, email, title }) =>//we are telling generateMarkdown what parts of the return object we need
 
  `# ${projectname}
 
@@ -127,14 +127,14 @@ name: 'githubUsername',
 
 ])
 .then((response) =>{
-    const readMeContent = generateMarkdown(response)
+    const readMeContent = generateMarkdown(response)// How can I also send (response) to generateBadge?
     fs.writeFile('YOURREADME.md', readMeContent, (err) =>
   err ? console.error(err) : console.log('Success! Your file is called "YOURREADME"')
 );
 }
 );
 
-
+//license-badges https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
 //    const htmlPageContent = generateHTML(answers);
 
 //require , prompt and types of prompts, 
