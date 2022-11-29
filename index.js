@@ -20,7 +20,7 @@ const generateNotice = (chosenLicense) => {
 		notice = MITnotice;
 	} else if (chosenLicense[0] === `Apache License 2.0`) {
 		notice = Apachenotice;
-	} else if (chosenLicense[0] === `
+	}
 
 	return notice;
 };
