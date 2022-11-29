@@ -1,6 +1,6 @@
-# TitleTitleTitle
+# My TITLE
 
- 
+ ![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Table of Contents
 
@@ -15,6 +15,27 @@
 
 [License](##license)
 
+            Copyright (c) 2012-2022 Scott Chacon and others
+
+            Permission is hereby granted, free of charge, to any person obtaining
+            a copy of this software and associated documentation files (the
+            "Software"), to deal in the Software without restriction, including
+            without limitation the rights to use, copy, modify, merge, publish,
+            distribute, sublicense, and/or sell copies of the Software, and to
+            permit persons to whom the Software is furnished to do so, subject to
+            the following conditions:
+
+            The above copyright notice and this permission notice shall be
+            included in all copies or substantial portions of the Software.
+
+            THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+            EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+            MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+            NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+            LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+            OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+            WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+        
 
 [Contributing](#contributing)
 
@@ -26,21 +47,21 @@
 
 
 ## Description
-### Does athing 
+### asdf 
 
 ## Installation 
-### do this then that
+### asdf
 
 ## Usage
-### do this then that then that
-###  Here is a screenshot: <> Screenshot explanation:  
+### qwer
+###  Here is a screenshot: <sdg> Screenshot explanation:  qew
 
 ## License
-### This project is licensed under the terms of the Apache License 2.0 license.
+### This project is licensed under the terms of the MIT license.
 
 ## Contributing
 ### Here is how to contribute.  undefined
 
 ## Questions?
-### Find me on GitHub at : <https://github.com/Rhys>
-### Or contact me at me@awesome.net if you have any further questions. 
+### Find me on GitHub at : <https://github.com/sdf>
+### Or contact me at we if you have any further questions. 
