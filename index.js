@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-import { MITnotice } from ".notices.js";
+const MITnotice = require("./notices");
 
 const generateBadge = (license) => {
 	//How can I get the result of this code, badge, to appear in generateMarkdown?
