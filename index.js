@@ -3,7 +3,6 @@ const fs = require("fs");
 const MITnotice = require("./notices");
 
 const generateBadge = (license) => {
-	//How can I get the result of this code, badge, to appear in generateMarkdown?
 	let badge = "";
 	// return `![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)`
 	console.log("license is,", license);
@@ -28,9 +27,9 @@ const generateBadge = (license) => {
 	return badge;
 };
 
-const generateNotice = (thelicense) => {
+const generateNotice = (chosenLicense) => {
 	let notice = "";
-	if (thelicense[0] === `MIT`) {
+	if (chosenLicense[0] === `MIT`) {
 		notice = MITnotice;
 	}
 	return notice;
@@ -67,7 +66,7 @@ const generateMarkdown = (
 
 
 [License](##license)
-${generateNotice(license)}
+
 
 [Contributing](#contributing)
 
@@ -89,7 +88,8 @@ ${generateNotice(license)}
 ###  Here is a screenshot: <${screenshot}> Screenshot explanation:  ${explain}
 
 ## License
-### This project is licensed under the terms of the ${license} license.
+### ${generateNotice(license)}
+
 
 ## Contributing
 ### Here is how to contribute.  ${contributions}
