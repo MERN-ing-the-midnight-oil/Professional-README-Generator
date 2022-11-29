@@ -24,7 +24,7 @@ const generateNotice = (chosenLicense) => {
 	return notice;
 };
 
-const generateMarkdown = `(
+const generateMarkdown = (
 	{
 		projectname,
 		description,
@@ -38,7 +38,7 @@ const generateMarkdown = `(
 		email,
 	} //we just generateMarkdown what parts of the return object we need
 ) =>
-	# ${projectname}
+	`# ${projectname}
 
  ${generateBadge(license)}
 
@@ -84,8 +84,8 @@ const generateMarkdown = `(
 
 ## Questions?
 ### Find me on GitHub at : <https://github.com/${githubUsername}>
-### Or contact me at ${email} if you have any further questions.
-`;
+### Or contact me at ${email} if you have any further questions.`;
+
 inquirer
 	.prompt([
 		{
