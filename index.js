@@ -1,29 +1,16 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const MITnotice = require("./notices");
+const Apachenotice = require("./notices");
 
 const generateBadge = (license) => {
 	let badge = "";
-	// return `![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)`
-	console.log("license is,", license);
 	if (license[0] === `MIT`) {
 		badge = `![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)`;
 	}
-	// else if (license === `asdf`) {
-	//     badge = `![asdf License](https://asdf.svg)`
-	// }
-	// else if (license === `asdf`) {
-	//     badge = `![asdf License](https://asdf.svg)`
-	// }
-	// else if (license === `asdf`) {
-	//     badge = `![asdf License](https://asdf.svg)`
-	// }
-	// else if (license === `asdf`) {
-	//     badge = `![asdf License](https://asdf.svg)`
-	// }
-	// else if (license === `asdf`) {
-	//     badge = `![asdf License](https://asdf.svg)`
-	// }
+	 else if (license === `Apachenotice`) {
+	     badge = `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
+	 }
 	return badge;
 };
 
@@ -31,12 +18,14 @@ const generateNotice = (chosenLicense) => {
 	let notice = "";
 	if (chosenLicense[0] === `MIT`) {
 		notice = MITnotice;
-	}
+	} else if (chosenLicense[0] === `Apache License 2.0`) {
+		notice = Apachenotice;
+	} else if (chosenLicense[0] === `
+
 	return notice;
 };
 
-// I was really hoping thtat puting  ${generateBadge(title)} after the project name  here in the generateMarkdown would inject the badge URL that generateBadge should make.
-const generateMarkdown = (
+const generateMarkdown = `(
 	{
 		projectname,
 		description,
@@ -48,9 +37,9 @@ const generateMarkdown = (
 		explain,
 		contributions,
 		email,
-	} //we are telling generateMarkdown what parts of the return object we need
+	} //we just generateMarkdown what parts of the return object we need
 ) =>
-	`# ${projectname}
+	# ${projectname}
 
  ${generateBadge(license)}
 
@@ -65,7 +54,7 @@ const generateMarkdown = (
 [Usage](#usage)
 
 
-[License](##license)
+[License](#license)
 
 
 [Contributing](#contributing)
@@ -75,7 +64,7 @@ const generateMarkdown = (
 
 
 [Questions](#questions)
-
+`
 
 ## Description
 ### ${description} 
@@ -96,8 +85,8 @@ const generateMarkdown = (
 
 ## Questions?
 ### Find me on GitHub at : <https://github.com/${githubUsername}>
-### Or contact me at ${email} if you have any further questions. 
-`;
+### Or contact me at ${email} if you have any further questions.
+;
 
 inquirer
 	.prompt([
@@ -143,18 +132,19 @@ inquirer
 			choices: [
 				"MIT",
 				"Apache License 2.0",
-				"BSD Licenses",
-				`The 3-Clause BSD License`,
-				`General Public License version 3`,
-				`Mozilla Public License 2.0`,
 			],
 			name: "license",
 		},
-
 		{
 			type: "input",
 			message: "At what email should users contact you with questions?",
 			name: "email",
+		},
+
+		{
+			type: "input",
+			message: "How can I contribute?",
+			name: "contributions",
 		},
 
 		{
