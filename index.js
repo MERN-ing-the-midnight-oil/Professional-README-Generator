@@ -7,13 +7,14 @@ const generateBadge = (license) => {
 	let badge = "";
 	if (license[0] === `MIT`) {
 		badge = `![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)`;
-	} else if (license === `Apachenotice`) {
-		badge = `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
+	} else if (license[0] === `Apachenotice`) {
+		badge = `![Appache License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
 	}
 	return badge;
 };
 
 const generateNotice = (chosenLicense) => {
+	//chosenLicense is passed from license from the promise response object following the user questions and response input
 	let notice = "";
 	if (chosenLicense[0] === `MIT`) {
 		notice = MITnotice;
@@ -79,7 +80,7 @@ const generateMarkdown = (
 ### ${generateNotice(license)}
 
 
-## Contributing
+## Contributing to this project:
 ### Here is how to contribute.  ${contributions}
 
 ## Questions?
@@ -138,7 +139,7 @@ inquirer
 
 		{
 			type: "input",
-			message: "How can I contribute?",
+			message: "How can someone contribute to this project?",
 			name: "contributions",
 		},
 
