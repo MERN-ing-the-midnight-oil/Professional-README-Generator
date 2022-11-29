@@ -7,10 +7,9 @@ const generateBadge = (license) => {
 	let badge = "";
 	if (license[0] === `MIT`) {
 		badge = `![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)`;
+	} else if (license === `Apachenotice`) {
+		badge = `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
 	}
-	 else if (license === `Apachenotice`) {
-	     badge = `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
-	 }
 	return badge;
 };
 
@@ -64,7 +63,7 @@ const generateMarkdown = `(
 
 
 [Questions](#questions)
-`
+
 
 ## Description
 ### ${description} 
@@ -86,8 +85,7 @@ const generateMarkdown = `(
 ## Questions?
 ### Find me on GitHub at : <https://github.com/${githubUsername}>
 ### Or contact me at ${email} if you have any further questions.
-;
-
+`;
 inquirer
 	.prompt([
 		{
@@ -129,10 +127,7 @@ inquirer
 			type: "checkbox",
 			message:
 				"What license are you using? This will generate a license notice in your README.",
-			choices: [
-				"MIT",
-				"Apache License 2.0",
-			],
+			choices: ["MIT", "Apache License 2.0"],
 			name: "license",
 		},
 		{
