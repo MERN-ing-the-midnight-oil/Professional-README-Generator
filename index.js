@@ -5,10 +5,12 @@ const Apachenotice = require("./notices");
 
 const generateBadge = (license) => {
 	let badge = "";
+	// Apache 2.0 => license[0].split(" ").join("%20") // ["Apache", "2.0"] => "Apache%202.0"
+	//badge = `![${license[0]}](https://img.shields.io/badge/license-${license[0]}-green)`;
 	if (license[0] === `MIT`) {
-		badge = `![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)`;
+		badge = `![MIT License](https://img.shields.io/badge/license-MIT-green)`;
 	} else if (license[0] === `Apachenotice`) {
-		badge = `![Appache License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
+		badge = `![Apache 2.0 License](https://img.shields.io/badge/license-Apache%202.0-yellowgreen)`;
 	}
 	return badge;
 };
