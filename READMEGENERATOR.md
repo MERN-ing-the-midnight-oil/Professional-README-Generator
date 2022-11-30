@@ -1,4 +1,4 @@
-# Title , THE BEST TITLE
+# README Generator
 
  ![MIT License](https://img.shields.io/badge/license-MIT-green)
 
@@ -26,14 +26,14 @@
 
 
 ## Description
-### werqefrer 
+### This application was written with Javascript in the Node environment. It is a command line application that takes user input after prompts and generates an attractive .md README based on the input. The README you are reading now was made using this application! 
 
 ## Installation 
-### htrgrfd
+### This is a command line application, so you will install it locally by cloning this Github repo. Then type "node index.js" from your terminal in the "Professional-Readme" working directory.
 
 ## Usage
-### htgtrfew
-###  Here is a screenshot: <ytthrgfr> Screenshot explanation:  uytyrrg
+### This can be used to quickly generate a README, and you can then further customize the README as you would like. It is a way to quickly get started. 
+###  Here is a screenshot: <> Screenshot explanation:  
 
 ## License
 ###    TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
@@ -236,8 +236,8 @@ limitations under the License.
 
 
 ## Contributing to this project:
-### Here is how to contribute.  wertrhttygffewefw
+### Here is how to contribute.  
 
 ## Questions?
-### Find me on GitHub at : <https://github.com/htgfdsfghtgr>
+### Find me on GitHub at : <https://github.com/Noctiluca-scintillans>
 ### Or contact me at r.smoker@gmail.com if you have any further questions.
