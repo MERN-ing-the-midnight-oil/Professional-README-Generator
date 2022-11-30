@@ -9,7 +9,7 @@ const generateBadge = (license) => {
 	//badge = `![${license[0]}](https://img.shields.io/badge/license-${license[0]}-green)`;
 	if (license[0] === `MIT`) {
 		badge = `![MIT License](https://img.shields.io/badge/license-MIT-green)`;
-	} else if (license[0] === `Apachenotice`) {
+	} else if (license[0] === `Apache License 2.0`) {
 		badge = `![Apache 2.0 License](https://img.shields.io/badge/license-Apache%202.0-yellowgreen)`;
 	}
 	return badge;
