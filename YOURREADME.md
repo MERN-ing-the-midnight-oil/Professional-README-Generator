@@ -1,6 +1,6 @@
-# asdlfTITLE TITLE GOOD MORNING
+# E-Commerce Back-End
 
- ![Apache 2.0 License](https://img.shields.io/badge/license-Apache%202.0-yellowgreen)
+ ![MIT License](https://img.shields.io/badge/license-MIT-green)
 
 ## Table of Contents
 
@@ -26,14 +26,14 @@
 
 
 ## Description
-### asdf 
+### In this project I built the back end for an e-commerce site by modifying starter code. I configured a working Express.js API to use Sequelize to interact with a MySQL database. 
 
 ## Installation 
-### qwer
+### This project uses MySQL2 and Sequelize packages to connect the Express.js API to the database and uses a dotenv package to use environment variables to store sensitive data. You will need to use schema.sql to create the database (using MySQL shell commands) and use environmental variables for MYSQL username , password, and database name, before you run the server. 
 
 ## Usage
-### wfg
-###  Here is a screenshot: <'qe> Screenshot explanation:  qf
+### This is the back end only . You will need to build a front end that has an interface to use the database. You can test the routes using "Insomnia". 
+###  Here is a screenshot: <> Screenshot explanation:  
 
 ## License
 ###    TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
@@ -236,8 +236,8 @@ limitations under the License.
 
 
 ## Contributing to this project:
-### Here is how to contribute.  wgf
+### Here is how to contribute.  N/A
 
 ## Questions?
-### Find me on GitHub at : <https://github.com/er>
-### Or contact me at wreg if you have any further questions.
+### Find me on GitHub at : <https://github.com/Noctiluca-scintillans>
+### Or contact me at r.smoker@gmail.com if you have any further questions.
